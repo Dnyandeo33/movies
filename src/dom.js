@@ -1,5 +1,6 @@
 const dom = {
-    parent: document.getElementById('parent'),
+    input: document.getElementById('input'),
+    cardContainer: document.querySelector('.card-container')
 };
 
 export default dom;

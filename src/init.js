@@ -1,3 +1,2 @@
-import loadEvent from './events/loadEvent.js';
-
-loadEvent();
+import loadKeyupHandler from './events/eventsHandler.js';
+loadKeyupHandler();

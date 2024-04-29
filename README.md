@@ -1,17 +1,18 @@
-# Image gallery
+# Movies Image gallery
 
-> A simple
+> A simple project about movies poster gallery.
 
 ## Table of contents
 
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+- [Movies Image gallery](#movies-image-gallery)
+  - [Table of contents](#table-of-contents)
+  - [General info](#general-info)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Code Examples](#code-examples)
+  - [Features](#features)
+  - [Status](#status)
 
 ## General info
 
@@ -20,7 +21,7 @@
 
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/movies.png)
 
 ## Technologies
 
@@ -31,31 +32,41 @@
 
 ## Setup
 
-clone the repo and start using the stop watch.
+clone the repo npm install and start
 
 ## Code Examples
 
 ```js
+const loadKeyupHandler = () => {
+	// load all movie
+	data.movies.forEach((movie) => {
+		const card = createCard(movie);
+		dom.cardContainer.append(card);
+	});
 
+	// filter movie
+	dom.input.addEventListener('keyup', () => {
+		const value = dom.input.value.toLowerCase();
+		const movies = data.movies;
+		const filterMovie = searchMovies(movies, value);
+
+		dom.cardContainer.innerHTML = '';
+		filterMovie.forEach((movie) => {
+			const card = createCard(movie);
+			dom.cardContainer.append(card);
+		});
+	});
+};
 ```
 
 ## Features
 
 List of features ready and Todos for future development
 
--
--
--
-
-To-do list:
-
--
--
+- used load event
+- used keyUp event
+- filter movie using input value
 
 ## Status
 
-Project is: _in progress_
-
-## Inspiration
-
-## Contact
+Project is: _Done_
