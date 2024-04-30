@@ -5,7 +5,7 @@ const searchMovies = (movies, value) => {
         movies.forEach(movie => {
             movie.title.toLowerCase().includes(value) ? matchingMovies.push(movie) : null;
         });
-        return matchingMovies
+        return matchingMovies;
     }
     return movies
 }
